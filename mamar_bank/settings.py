@@ -31,7 +31,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-CSRF_TRUSTED_ORIGINS = ['https://mamar-bank-lbln.onrender.com','https://*.127.0.0.1']
+# CSRF_TRUSTED_ORIGINS = ['https://mamar-bank-lbln.onrender.com','https://*.127.0.0.1']
 
 
 
@@ -85,12 +85,12 @@ WSGI_APPLICATION = 'mamar_bank.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 # Your secret key
 SECRET_KEY = env("SECRET_KEY")
@@ -107,12 +107,12 @@ SECRET_KEY = env("SECRET_KEY")
 # }
 
 # Replace the SQLite DATABASES configuration with PostgreSQL:
-DATABASES = {
-    'default': dj_database_url.config(
-        # Replace this value with your local database's connection string.
-        default='postgres://mamarbank_i7y2_user:kKuM8dWQveZZAqE3y1ZlIcvAnDS3VXqC@dpg-cppf2208fa8c739et9j0-a.oregon-postgres.render.com/mamarbank_i7y2',
-    )
-} 
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         # Replace this value with your local database's connection string.
+#         default='postgres://mamarbank_i7y2_user:kKuM8dWQveZZAqE3y1ZlIcvAnDS3VXqC@dpg-cppf2208fa8c739et9j0-a.oregon-postgres.render.com/mamarbank_i7y2',
+#     )
+# } 
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
